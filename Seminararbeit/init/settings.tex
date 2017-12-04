@@ -1,0 +1,163 @@
+%-------------------------------------------
+%--  Settings							  --
+%-------------------------------------------
+
+%\RequirePackage{fix-cm}							%Standardschrift - Computer Modern, dickere Schrfit in seriefenloser Schrift --> Komaskript berichtigt die Schrift bei Satzspiegelberechnung
+\documentclass[
+	12pt, 										%Schriftgröße
+	draft=false,									%Überlänge des Textes markieren
+	DIV=13,										%Unterteilung
+	%BCOR=7mm	,									%Bindekorrektur
+	a4paper, 									%Papierformat
+	ngerman, 									%Silbentrennung und Umlaute, dt. Sprachpaket
+	titlepage,									%Titelseite
+	listof=totoc,								%Verzeichnisse im Inhaltsverzeichnis aufführen
+	bibliography=totoc,							%Literaturverzeichnis im TOC
+	headinclude=true,							%Satzspiegelberechnung
+	footinclude=false,							%Satzspiegelberechnung
+	headsepline=true,							%Linie Kopfzeile
+	footsepline=false,							%Linie Fußzeile
+	captions=tableheading,						%Platz zw. Caption und Tabelle
+	abstract=false,								%Zusammenfassung vor Dokument
+	parskip=true,								%Absätze statt Einrückungen
+]{scrreprt}
+%\recalctypearea									%Neuberechnung Satzspiegel bei DIV=calc
+
+%-------------------------------------------
+%--  Load Packages						  --
+%-------------------------------------------
+\usepackage[T1]{fontenc}							%Suchfkt. in PDF, Kopieren von Umlauten
+\usepackage{babel}								%Sprachpakete, global in documentclass definiert
+\usepackage[utf8]{inputenc}						%Umlaute, Editor UTF-Kodieriung aktivieren
+\usepackage{lmodern}								%Schriftart inkl. Mathe
+\usepackage[babel,german=quotes]{csquotes}		%Deutscher Stil
+\usepackage[math]{blindtext}						%Blindtext mit Option z.B. Mathe [math]
+\usepackage{amsmath,amssymb}						%Mathepakete
+\usepackage[decimalsymbol=comma]{siunitx}		%SI-Einheiten
+\usepackage{microtype}							%Optischer Randausgleich, Trennstriche in Rand
+\usepackage[automark]{scrlayer-scrpage}			%Kopf- und Fußzeilenpaket (früher scrpage2)
+\usepackage{biblatex}							%Literaturverzeichnis mit BIBER
+\usepackage[printonlyused]{acronym}				%Abkürzungsverzeichnis, nur verwendete Abkürzungen darstellen
+\usepackage{appendix}							%Anhang
+\usepackage{epigraph}							%Zitat zu Beginn
+\usepackage{eurosym}								%Eurosymbol
+\usepackage{tabularx}							%Tabelle X kann \newline + autom. Spaltenbreite
+\usepackage[table]{xcolor} 						%Tabellen farbig
+\usepackage{array}								%Vertikale Ausrichtung m-Spalte, b-Spalte
+\usepackage{booktabs}							%SW Linien Torule,Midrule,Bottomrule
+\usepackage{multirow}							%Gemittelte Ausrichtung Tabellenzelle
+\usepackage{ragged2e}							%Links-/Rechstbündig RaggedRight ~= raggedright! 
+\usepackage{units}								%Einheiten in folgendem Format \unit[100]{°C}
+
+%-------------------------------------------
+%--   URL								  --
+%-------------------------------------------
+\usepackage{url}
+\setcounter{biburlnumpenalty}{100}
+\setcounter{biburlucpenalty}{100}
+\setcounter{biburllcpenalty}{100}
+
+%-------------------------------------------
+%--   Images							  --
+%-------------------------------------------
+\usepackage{graphicx}							%Bilder einbinden
+\usepackage{epstopdf}							%EPS2PDF Converter
+\usepackage{subfig}								%Bildunterteilung
+
+%-------------------------------------------
+%--  Global Variables & Commandos		  --
+%-------------------------------------------
+\newcommand{\authorname}{Fabian Donderer}
+\newcommand{\subjectname}{Seminararbeit}	
+\newcommand{\titlename}{Methodische und modellbasierte Betrachtung einer EPS-Lenkung}
+\newcommand{\subtitlename}{Nachhaltige modellbasierte Elektromobilität}
+\newcommand{\betreuer}{Prof.\ Dr.\ Vahid Salehi\\ \  \  }
+\newcommand{\publishersname}{%
+	Hochschule München\protect\\
+	Hochschule für angewandte Wissenschaften München\protect\\
+	Fakultät für angewandte Naturwissenschaften und Mechatronik}
+\newcommand{\keywordslist}{Seminararbeit, Elektromobilität, Mechatronische Systeme, Methodische Betrachtung, Modellbasierte Betrachtung, EPS-Lenkung}
+\newcommand{\pdfcreatorlist}{MiKTeX, LaTeX with hyperref and KOMA-Script}
+
+\newcommand{\img}[5]{
+	\begin{figure}[htbp]\centering
+		\includegraphics[width=#1\linewidth,clip,trim=0mm 0mm 0mm 0mm]{#2}
+		\caption[#3]{#4}
+		\label{fig:#5}
+	\end{figure}}
+	
+\newcommand{\subimg}[8]{	
+	\begin{figure}[htbp]
+		\centering
+		\subfloat[#1]{
+			\includegraphics[width=#2\linewidth,clip,trim=0mm 0mm 0mm 0mm]{#3}}	%trim/clip li, un, re, ob
+			\qquad
+			\subfloat[#4]{
+			\includegraphics[width=#2\linewidth,clip,trim=0mm 0mm 0mm 0mm]{#5}}	%trim/clip li, un, re, ob
+			\caption[#6]{#7}
+		\label{fig:#8}
+	\end{figure}}
+	
+%-------------------------------------------
+%--   Silbentrennung			   		  --
+%-------------------------------------------
+\hyphenation{ 
+  %Tech-no-logie-ver-drän-gung
+} 
+
+%-------------------------------------------
+%--   SI-Units							  --
+%-------------------------------------------
+\newunit{\ct}{ct}
+\newunit{\GWh}{GWh}
+
+%-------------------------------------------
+%--   References						  --
+%-------------------------------------------
+\usepackage{varioref}							%Reihenfolge beachten für Cross-Referencing
+\usepackage[
+	hyperfootnotes,								%Option Rücksprung von Fußnote in Text
+	bookmarksopenlevel=1,						%PDF Öffnet die Chapter in der Vorschau					
+]{hyperref}				
+\usepackage{cleveref}							%Referenzierung mit Seite und Bezeichner
+
+
+%-------------------------------------------
+%--  Meta PDF							  --
+%-------------------------------------------
+\hypersetup{pdfinfo={
+  Title=\titlename,
+  Author=\authorname,
+  Subject=\subjectname,
+  Keywords={\keywordslist},
+  pdfcreator={\pdfcreatorlist},
+}}
+
+%-------------------------------------------
+%--  Imagepath							  --
+%-------------------------------------------
+\graphicspath{{./img/}}							%Grafiken in einem Unterordner speichern
+
+%-------------------------------------------
+%--  Formatting							  --
+%-------------------------------------------
+\setkomafont{disposition}{\normalcolor\bfseries}	%Überschriften mit Serifen
+%\setlength{\parindent}{0em}						%Erstzeileneinzug/Einrückung on/off
+
+%-------------------------------------------
+%--  Header & Footer					  --
+%-------------------------------------------
+\pagestyle{scrheadings}							%Kopf- und Fußzeile
+\renewcommand*{\chapterpagestyle}{scrheadings} 	%Kopf- und Fußzeile auch auf Kapitelanfangsseiten
+\renewcommand{\headfont}{\normalfont}			%Schriftform der Kopfzeile
+%\setlength\footskip{110pt}						%Höhe Fußzeile
+
+%% Header
+\ihead{\headmark} 								%links, Kapitel
+\chead{}										%mitte
+\ohead{}										%rechts
+
+%% Footer
+\ifoot{}										%links
+\cfoot{}										%mitte
+\ofoot{\pagemark}								%rechts

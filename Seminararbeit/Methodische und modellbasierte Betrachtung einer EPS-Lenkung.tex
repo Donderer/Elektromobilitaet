@@ -1,0 +1,54 @@
+%-------------------------------------------
+%--   Load Settings                       --
+%-------------------------------------------
+\input{./init/settings}
+\bibliography{literaturverzeichnis}
+\input{./cha/00_titlepage/titlepage}
+
+
+%-------------------------------------------
+%--  Input Document						  --
+%-------------------------------------------
+\begin{document}
+\maketitle
+%\deffootnote[1.0em]{1.5em}{1.5em}{\textsuperscript{\thefootnotemark}} 
+%\input{./cha/00_abstract/abstract}
+\pagenumbering{Roman}
+\setcounter{tocdepth}{2}
+\newcounter{SeitenzahlSpeicher}
+\tableofcontents
+\listoffigures
+\listoftables
+\input{./cha/00_acronyms/acronyms}
+
+\clearpage
+
+\setcounter{SeitenzahlSpeicher}{\value{page}}
+\pagenumbering{arabic}
+\input{./cha/00_abstract/abstract}
+\input{./cha/01_einleitung/einleitung}
+\input{./cha/02_notwendigkeit/notwendigkeit}
+\input{./cha/03_fallbeispiel/fallbeispiel}
+\input{./cha/04_zusammenfassung/zusammenfassung}
+
+
+\clearpage
+%\blinddocument
+
+%\img{0.3}{eye}{bilderung IM ABBILDUNGSVERZEICHNIS}{BILDUNTERSCHRIFT \autocite{Sterner2014}}{refer} 
+%\subimg{eyea}{0.3}{eye}{eyeb}{eye}{Abbildungsverzeichnis Subfig}{Bildunterschriftung \autocite{Sterner2014}}{Label}
+%Wie in \cref{fig:refer} zu sehen ist, das Auge des Teufels \cref{fig:Label}
+
+\pagenumbering{Roman}
+\setcounter{page}{\theSeitenzahlSpeicher}
+\emergencystretch=1em
+%\printbibliography[title=Literaturverzeichnis]
+
+
+\end{document}
+
+%---------------------------------------------
+%--  Information							--
+%---------------------------------------------
+%Abgabe: 		20.12.2017
+%Seitenzahl: 	10-12 Seiten

@@ -1,0 +1,245 @@
+%-------------------------------------------
+%--  Chapter							  --
+%-------------------------------------------
+%60% --> 6 Seite
+\chapter{Fallbeispiel}
+\label{cha:Fallbeispiel}
+
+Betrachtete Komponenten:
+-Lenkgetriebe
+-Lenksäule
+-Elektromotor
+-Getriebe am Elektromotor
+
+
+
+%-------------------------------------------
+%--  Section							  --
+%-------------------------------------------
+\section{Anforderung}
+\label{cha:Anforderung}
+Anforderungsebene
+-Erfassung
+-Dokumentation
+-Priorisierung
+-Betrachtungsebene
+-Qualitätsmerkmale
+
+\begin{table}
+\caption{Systemanforderungen an das EPS-System}
+\begin{tabular}{|p{0.4\textwidth}|p{0.6\textwidth}|} \hline
+	Lenkradwinkelbereich 									& \unit[$\pm$450]{\degree} ... \unit[$\pm$650]{\degree} \\ \hline
+	Lenkradmomentenbereich mit					 			& \unit[$\pm$3]{Nm} ... \unit[$\pm$8]{Nm} \\
+	Servounterstützung										& \\ \hline
+	Lenkradmomentenbereich bei 								& \unit[$\pm$200]{Nm} ... \unit[$\pm$300]{Nm} \\
+	Missbrauchsversuch										& \\ \hline
+	Lenkübersetzung (Zahnstangenweg je Lenkradumdrehung) 	& \unit[44]{mm/Umdr.} ... \unit[60]{mm/Umdr.} \\ \hline
+	Maximale Spurstangenkraft								& \unit[$\pm$3]{kN} ... \unit[$\pm$6]{kN}\\ 
+	Parkieren												& \\ \hline
+	Minimale Lenkradgeschwindigkeit Parkieren 				& \unit[100]{\degree /s} ... \unit[360]{\degree /s} \\ \hline
+	Versorgungsspannung										& \unit[9]{V} ... \unit[16]{V} \\ \hline
+	Maximale Stromaufnahme 									& \unit[<120]{A}\\ \hline
+	Temperaturbereich 										& \unit[-40]{\degree C} ... \unit[+ 85]{\degree C} für Fahrzeuginnenraum \\
+															& \unit[-40]{\degree C} ... \unit[+125]{\degree C} für 	Motorraum\\ \hline
+	Betriebsdauer 											& \unit[15]{Jahre} ... \unit[20]{Jahre} \\
+															& \unit[5.000] ... \unit[12.000]{} aktive Betriebsstunden \\
+															& \unit[200.000]{km} ... \unit[300.000]{km} Fahrzeuglaufleistung \\ \hline
+	Akustik 												& Eine hinreichend geringe Geräuschentwicklung muss durch objektive Prüfstandsmessungen am Gesamtsystem Lenkung nachgewiesen werden. Die Prüfungen werden zwischen Fahrzeug- und Lenksystemhersteller abgestimmt \\ \hline
+\end{tabular}
+\label{Systemanforderungen an das EPS-System}
+\end{table}
+
+
+Fahrzeuge ab Segment-C (USA-Midsize)
+12-V Stromversorgung
+18 kN Zahnstangenkraft
+Verwendung von mechatronischen Standardbauteilen %Das System hat den gleichen mechatronischen Kern (Systemarchitektur, Sicherheit, Sensor, Elektromotor, ECU und Softwarekonzeption) wie der verwandte Lenksäulenantrieb
+Keine Schleppverluste am Motor --> Kraftstoffminderung um bis zu 0,33l/100 km
+8g/km CO2 Reduzierung
+
+
+\url{http://www.all-electronics.de/wp-content/uploads/migrated/article-pdf/173221/34-advertorial-hella.pdf} %Hella Steuergeräte infos
+\url{http://www.bosch-automotive-steering.com/fileadmin/downloads/Flyer_Nkw/AS_Systemmappe_Servolectric_D_lowres_20150513.pdf} %Es werden alle Lenkungstypen ganz grob vorgestellt. Am Ende wird auf die einzelnen Komponenten kurz eingegangen. 
+
+
+
+\section{Funktion und Wirkstruktur}
+\label{cha:Wirkstuktur}
+Funktionsebene
+-Abstraktion der Gesamtfunktion
+-Funktionshierarchie/Funktionsstruktur
+-Wirkstukturmodellierung
+
+
+
+\section{Verhalten}
+\label{cha:Verhalten}
+
+
+
+\section{Komponenten}
+\label{cha:Komponenten}
+
+
+
+
+
+
+
+Lösungsvarianten
+
+
+
+%\epigraph{\textit{Die Erneuerbaren brauchen keinen Welpenschutz mehr, sondern sind erwachsen geworden und müssen sich nun im Wettbewerb behaupten.}}{\textit{(Sigmar Gabriel, 2016)}}
+% 
+%Durch den Anstieg der Vergütungszahlungen hat die \acs{EEG}-Umlage nach \cref{cha:eegumlage} auf \SI{6,35}{\ct} pro kWh zugenommen und steigt für das Jahr 2017 auf \SI{6,88}{\ct} pro kWh. Um in Zukunft die Förderungskosten der \acs{EE} in den Griff zu bekommen und die Technologien weiter in den Markt zu integrieren, soll ein Ausschreibungsverfahren die Einspeisevergütung ersetzen. 
+%
+%%-------------------------------------------
+%%--  Section								 --
+%%-------------------------------------------
+%\section{Ziele der Ausschreibungsverfahren}
+%\label{cha:zielederausschreibungsverfahren}
+%Eine Ausschreibung wird nach §\,3 im \acs{EEG} 2017 als ein \enquote{transparentes, diskriminierungsfreies und wettbewerbliches Verfahren zur Bestimmung des Anspruchsberechtigten und des anzulegenden Werts} definiert. Der anzulegende Wert in Cent pro kWh ist der Betrag, den die \ac{BNetzA} im Rahmen einer Ausschreibung gesetzlich bestimmt und dem Anlagenbetreiber nach Inbetriebnahme der Anlage als Summe aus der staatlichen Förderung (Marktprämie) und dem Börsenerlös zugesteht. Dabei sinkt die staatliche Förderung bei steigendem Börsenpreis und steigt bei sinkendem Börsenpreis (s.\,\cref{cha:marktpraemie}). Somit wird der anzulegende Wert zukünftig nicht mehr wie bisher gesetzlich festgelegt, sondern wird über die Ausschreibung ermittelt und bleibt über 20 Jahre konstant. Bestehend aus Marktwert und Marktprämie bleibt der anzulegende Wert konstant. Die Anteile von Marktprämie und Strombörsenerlös am anzulegenden Wert variieren monatlich. Im Folgenden werden die Ziele von Förderungsausschreibungen aufgelistet (vgl.\,\autocite{Kemnade2016},\,\autocite{WirtschaftundEnergieBMWi2016b}): 
+%
+%\begin{itemize}
+%\item Kosteneffiziente Sicherung des kontinuierlichen, kontrollierten Ausbaus der \acp{EE},
+%\item stärkere Integration der \acp{EE} in den Strommarkt zur Wettbewerbsfähigkeit,
+%\item Wahrung der Akteursvielfalt mit gleichen, fairen Chancen für alle Akteure.
+%\end{itemize}
+%
+%Aufgrund der Zielsetzung, die \acp{EE} weiterhin auszubauen und dabei die Kosten des Fördersystems zu reduzieren, soll der Ausbau kontrolliert, planvoll und kontinuierlich erfolgen. Zudem gilt, dass ausreichend Wettbewerb die Kosten senkt, denn \enquote{Ausschreibungen werden nur dort eingeführt, wo die Wettbewerbsintensität hoch genug ist.} (vgl.\,\autocite{WirtschaftundEnergieBMWi2016c}). Da bisher kleine und mittlere Akteure einen hohen Anteil am Zubau von \acs{EE}-Anlagen realisiert haben, soll letztlich ausreichend Wettbewerb mittels einer hohen Anzahl an Akteuren, die an der Errichtung und dem Betrieb von Anlagen beteiligt sind, sichergestellt werden. Deshalb wird versucht, das Ausschreibungsverfahren so zu gestalten, dass allen Akteuren hinsichtlich ihrer wirtschaftlichen Mittel gleichberechtigte Chancen eingeräumt werden. Zu den ausgeschriebenen Technologien zählen Photovoltaik, Windenergie auf Land sowie auf See und Biomasse. Dabei sind Anlagen mit einer Leistung von kleiner gleich 750\,kW ausgenommen bzw. \acfp{BMA} mit einer Leistung von kleiner gleich 150\,kW (vgl.\,\autocite{WirtschaftundEnergieBMWi2016b}).
+%
+%Die folgende \cref{fig:eeg_zeitplan} zeigt einen Zeitplan für die Einführung von Ausschreibungen, wie er gemäß \acs{EEG} 2.0 von 2014 vorgesehen ist. Im \acs{EEG} 2.0 wurden die ersten Eckpunkte und Konsultationen zu Pilotausschreibungen erfasst. Anschließend wurde mit der \ac{FFAV} eine Verordnung für das Pilotprojekt Ausschreibungen vorgelegt. Seit dem 01.04.2015 wurden erste Erfahrungen mit der Ausschreibung von Freiflächenanlagen im Sinne des nach §\,5 Nr.\,16 \acs{EEG}, also explizit keine Anlagen auf Gebäuden oder sonstigen baulichen Anlagen, nach der \acs{FFAV} gesammelt und Erkenntnisse erfasst. Dabei ist die Inanspruchnahme einer finanziellen Förderung nach den Regeln der \acs{FFAV} nicht für Anlagen möglich, die vor dem 01.09.2015 in Betrieb genommen wurden (§\,55 Absatz 3 Satz 2 \acs{EEG}). Mit dem \acs{EEG} 2017 wurden schließlich die Rahmenbedingungen für die ab 2017 ausgeschriebenen Förderungen vereinbart (vgl.\,\autocite{WirtschaftundEnergieBMWi2016d}).
+%
+%\img{0.95}{eeg_zeitplan}{EEG-Zeitplan}{EEG-Zeitplan Ausschnitt aus \autocite{WirtschaftundEnergieBMWi2016d}}{eeg_zeitplan} 
+%
+%%Aktuell entspricht der letzte Gebotstermin und somit auch die Abgabefrist von Geboten für \acfp{PVF} in diesem Jahr dem 01.12.2016. Der Höchstwert beträgt \SI{11,09}{\ct} pro kWh (vgl.\,\autocite{Bundesnetzagentur2016e}). 
+%
+%%-------------------------------------------
+%%--  Section								 --
+%%-------------------------------------------
+%\section{Ausschreibungsdesign der EE-Technologien}
+%\label{cha:ausschreibungsdesign}
+%Ein komplett einheitliches Ausschreibungsdesign für alle Technologien ist wegen der unterschiedlichen Rahmenbedingungen nicht sinnvoll. Daher wird auf das Ausschreibungsdesign technologiespezifisch eingegangen. Der allgemeine Ausschreibungsablauf gilt jedoch für alle Ausschreibungsdesigns. Diese Gemeinsamkeiten werden zunächst aufgelistet (vgl.\,\autocite{BundesgesetzblattTeilINr.2016},\,\autocite{WirtschaftundEnergieBMWi2016b}):
+%
+%\begin{itemize}
+%\item Der Förderanspruch ist davon abhängig, dass für die Anlage vorab eine Zuschlagserteilung von der \acs{BNetzA} ausgeschrieben wird (Gebotstermin, Ausschreibungsvolumen, Höchstwert, Formatvorgaben, weitere Festlegungen der \acs{BNetzA}).
+%\item Geboten wird auf den anzulegenden Wert\,=\,Marktwert\,+\,Marktprämie.
+%\item Ein Höchstpreis, der sich nach den bisherigen Förderhöhen richtet, soll nicht von den Geboten überschritten werden.
+%\item Die \acs{BNetzA} schreibt für jede Technologie eine vorab bestimmte Leistung aus.
+%\item In den Ausschreibungsrunden erfolgen die Gebotsabgaben einmalig und verdeckt.
+%\item Die niedrigsten Gebote erhalten den Zuschlag, welcher projektbezogen erfolgt.
+%\item \enquote{Pay as bid} -- die Vergütung richtet sich nach dem eigenen Gebot im Gegensatz zum \enquote{uniform pricing}\footnote{Der Einheitspreis hat zur Folge, dass einige Bieter eine höhere Förderung erhalten, als sie im Bieterverfahren angegeben haben.}, bei dem die niedrigsten Gebote den Zuschlag erhalten, die Förderungshöhe sich nach dem höchsten Gebot richtet und der Förderbetrag für alle ausgeschriebenen Anlagen gleich ist.
+%\item Realisierung der Projekte erfolgt innerhalb einer Frist von 2 Jahren bzw. bei \acp{WKA} 30 Monate nach Zuschlagserteilung, sonst ist eine Pönale\footnote{Strafzahlung} fällig.
+%\item Die finanzielle Förderung ist für die Dauer von 20 Kalenderjahren zu zahlen (vgl.\,\autocite{JustizundfuerVerbraucherschutz2014}). 
+%\end{itemize}
+%
+%Die \cref{fig:eeg_grundzuege} fasst den Ablauf einer Ausschreibung plakativ zusammen. 
+%
+%\img{0.99}{eeg_grundzuege}{Grundzüge eines Ausschreibungsablaufs}{Grundzüge eines Ausschreibungsablaufs nach \autocite{Dinter2015}}{eeg_grundzuege} 
+%
+%Die Gebote müssen bei Abgabe Auskunft über den Bieter geben, wie Name, Anschrift, Telefonnummer und E-Mail Adresse sowie den Sitz bei einer rechtsfähigen Personengesellschaft oder juristischen Person. Zudem ist der Energieträger wie auch der Gebotstermin der Ausschreibung, die Gebotsmenge in kW ohne Nachkommastellen und der Gebotswert, das heißt der anzulegende Wert, in Cent pro kWh mit zwei Nachkommastellen, anzugeben. Zusätzlich sind die Standorte der Anlagen und der zuständige Übertragungsnetzbetreiber zu benennen. In einer Ausschreibung dürfen mehrere Gebote für unterschiedliche Anlagen abgegeben werden (vgl.\,\autocite{Dinter2015}).
+%
+%Um kleineren Akteuren die Teilnahme am Ausschreibungsverfahren zu erleichtern, sind folgende Regelungen zur Wahrung der Akteursvielfalt in dem \acs{EEG} 2017 vorgenommen worden. Für Bürgerenergieprojekte gilt, dass die Gesellschaften aus mindestens 10 Privatpersonen bestehen und die Mehrheit der Stimmrechte bei Privatpersonen vor Ort liegen. Außerdem können
+%Kommunen sich mit bis zu 10\,Prozent an den Investitionen beteiligen. Zudem wird auf die \ac{BImSchG}-Genehmigung verzichtet, so dass die Kosten im Voraus minimiert werden. Ein Nachweis einer Flächensicherung und die Vorlage eines zertifizierten Windgutachtens sind hierfür ausreichend. Außerdem erhalten Bürgerenergieprojekte den Wert des höchsten noch bezuschlagten Gebots statt den Wert ihres Gebots (vgl.\,\autocite{WirtschaftundEnergieBMWi2016b}).
+%
+%%-------------------------------------------
+%%--  Subsection							 --
+%%-------------------------------------------
+%\subsection{Photovoltaik}
+%\label{cha:photovoltaik}
+%Das Ausschreibungsvolumen für \acp{PVA} mit einer Leistung größer 700\,kW beträgt jährlich 600\,MW. Dreimal im Jahr, jeweils am ersten Februar, Juni und Oktober, werden 200\,MW zu installierende Leistung ausgeschrieben.
+%
+%Bei Geboten für Solaranlagen ist die Angabe hinzuzufügen, ob die Anlage auf oder an einem Gebäude, einer Lärmschutzwand, auf einer sonstigen baulichen Anlage oder auf einer Fläche errichtet werden soll. Da sich Bieter in den Ausschreibungsrunden mit einem oder mehreren Projekten bewerben können, darf die Maximalgröße eines Projekts, die Gebotsmenge, eine zu installierende Leistung von 10\,MW nicht überschreiten. Der Höchstwert beträgt \SI{8,91}{\ct} pro kWh und verringert oder erhöht sich der Höchstwert monatlich ab dem 01.02.2017 in Abhängigkeit vom anzulegenden Wert\footnote{Eine monatliche Absenkung des anzulegenden Wertes wird monatlich zum ersten Kalendertag um 0,5\,Prozent gegenüber dem jeweils vorangegangenen Kalendermonat geltenden anzulegenden Werten vorgenommen. Die Erhöhung oder Verringerung der monatlichen Absenkung erfolgt in Abhängigkeit vom Zubau \autocite{BundesgesetzblattTeilINr.2016}.}.
+%
+%%Im \acs{EEG} 2017 wird eine Zusatzklausel bezüglich der benachteiligten Gebiete eingeführt. Gebiete werden als \enquote{benachteiligt} bezeichnet, sofern eine landwirtschaftliche Produktion oder eine Tätigkeit durch naturbedingte Nachteile behindert wird. Dies erfolgt zum Beispiel durch ungünstiges Klima, abschüssige Nutzflächen in Berggebieten oder geringe Produktivität der Böden. Die Bundesländer entscheiden selbst, ob sie Acker- und Grundflächen in benachteiligten Gebieten zulassen (vgl.\,\autocite{WirtschaftundEnergieBMWi2016b},\,\autocite{WirtschaftundEnergieBMWi2016c},\,\autocite{WirtschaftundEnergieBMWi2015a}).
+%
+%Der in den Anlagen produzierte Strom darf während des gesamten Förderzeitraumes nicht zur Eigenversorgung genutzt werden. Dies ist auch bei einer späteren Übertragung vom neuen Eigentümer der Anlage zu beachten. Nach §\,38b im \acs{EEG} 2017 gilt:
+%
+%\begin{quote}
+%\enquote{Die Höhe des anzulegenden Werts entspricht dem Zuschlagswert des bezuschlagten Gebots, dessen Gebotsmenge der Solaranlage zugeteilt worden ist.} (Bundesregierung, S.\,2279, 2016 \autocite{BundesgesetzblattTeilINr.2016}).
+%\end{quote}
+%
+%Die Beschreibung und Erkenntnisse der Photovoltaik-Pilotprojekte erfolgt im nachfolgenden \cref{cha:beispielpv}.
+%
+%%-------------------------------------------
+%%--  Subsection							 --
+%%-------------------------------------------
+%\subsection{Windenergie}
+%\label{cha:windenergie}
+%Die Ausschreibungen sollen drei- bis viermal im Jahr stattfinden, um lange Wartezeiten nach Erteilung der Genehmigung zu vermeiden. Bei Nichtbezuschlagung in einer Ausschreibungsrunde können Bieter somit relativ zeitnah an der nachfolgenden Auktion teilnehmen. In Ergänzung zu den oben genannten Rahmenbedingungen gelten für \acp{WKA} an Land folgende Anforderungen:
+%
+%\begin{itemize}
+%\item Die Genehmigung nach dem \acs{BImSchG} muss drei Wochen vor dem Gebotstermin erteilt worden sein.
+%\item Die Anlagen müssen drei Wochen vor dem Gebotstermin als genehmigt an das Register gemeldet worden sein.
+%\end{itemize}
+%
+%Der Höchstwert für Strom aus Windenergieanlagen an Land beträgt im Jahr 2017 \SI{7,00}{\ct} pro kWh für den Referenzstandort mit einer konkreten Windleistung, dem der Wert 100\,Prozent zugewiesen wird. An einem 80-Prozent-Standort weht beispielsweise 20\,Prozent weniger Wind als am Referenzstandort. Ab dem 01.01.2018 erfolgt eine Anpassung. Der Höchstwert soll nach §\,36b im \acs{EEG} 2017 \enquote{[\,$\ldots$\,] aus dem um 8\,Prozent erhöhten Durchschnitt aus den Gebotswerten des jeweils höchsten noch bezuschlagten Gebots der letzten drei Gebotstermine} (Bundesregierung, S.\,2273, 2016 \autocite{BundesgesetzblattTeilINr.2016}) ermittelt werden. 
+%
+%Zur Steuerung des weiteren Zubaus von Windenergieanlagen an Land in Gebieten, in denen die Übertragungsnetze besonders stark überlastet sind, erfolgen besondere Zuschlagsvoraussetzungen für das Netzausbaugebiet. Dies umfasst insbesondere die Bundesländer Schleswig-Holstein und Mecklenburg-Vorpommern, sowie Teile in Niedersachsen. Die zu installierende Anlagenleistung, für die in dem Netzausbaugebiet Zuschläge erteilt werden, wird auf 58\,Prozent der installierten Leistung, die im Jahresdurchschnitt in den Jahren 2013 bis 2015 in diesem Gebiet in Betrieb genommen worden ist, begrenzt. 
+%
+%Sollten \acp{WKA} an Land nicht bis 30 Monate nach der öffentlichen Bekanntgabe des Zuschlags in Betrieb genommen sein, erlischt der Zuschlag. Andererseits kann der Zuschlag auf Antrag bis zur Frist bzw. bei Projektbeklagen einmalig verlängert werden.
+%
+%Es gelten nach §\,36g besondere Ausschreibungsbestimmungen für Bürgerenergiegesellschaften. Unter bestimmten Voraussetzungen können dabei für bis zu sechs \acp{WKA} an Land mit einer zu installierenden Leistung von insgesamt nicht mehr als 18\,MW bereits vor der Erteilung der Genehmigung nach dem \acs{BImSchG} Gebote abgegeben werden.
+% 
+%Im Allgemeinen wird auf den \enquote{anzulegenden Wert} auf Basis eines einstufigen Referenzertragsmodells am Referenzstandort geboten, um eine Vergleichbarkeit der Gebote zu gewährleisten. Das Referenzertragsmodell ist notwendig, um Standorten bundesweit eine erfolgreiche Teilnahme an der Ausschreibung zu ermöglichen.
+%Um den Bau effizienter Anlagen stärker als bisher zu fördern, wird der Referenzstandort neu definiert. Das heißt, auf 100\,Meter Höhe wird eine Windgeschwindigkeit von 6,45\,m/s angesetzt. Dabei beschreibt das Potenzgesetz mit einem Hellmannindex\footnote{Potzenzgesetz - Gleichung zur eindimensionalen, standortbezogenen Höhenextrapolation der Windgeschwindigkeit in der atmosphärischen Grenzschicht \autocite{WissenschaftVerlagsgesellschaftmbH2016}} von 0,25 die Windgeschwindigkeit in Abhängigkeit von der Anlagenhöhe. Mit Hilfe des gesetzlich definierten Korrekturfaktors wird der tatsächlich erwartete Referenzertrag der Anlage in den Referenzertrag des Referenzstandortes umgerechnet. Eine Überprüfung des Referenzertrags erfolgt nach 5, 10 und 15 Jahren. \cref{tab:korrekturfaktor} listet die Korrekturfaktoren in Abhängigkeit des Gütefaktors auf. Zwischen benachbarten Werten wird interpoliert. Der Korrekturfaktor wird für einen Gütefaktor kleiner 70\,Prozent nicht weiter erhöht.
+%
+%
+%\renewcommand{\tabularxcolumn}[1]{>{\centering\arraybackslash}m{#1}}
+%\begin{table}[h]
+%\caption[Korrekturfaktor in Abhängigkeit des Gütefaktors]{Korrekturfaktor in Abhängigkeit des Gütefaktors zur Ermittlung des anzulegenden Wertes in Anlehnung an \autocite{BundesgesetzblattTeilINr.2016}}
+%\label{tab:korrekturfaktor}
+%\centering
+%\begin{tabularx}{0.99\textwidth}{m{30mm}XXXXXXXXX}
+%\toprule
+%%\rowcolor{lightgray!50}
+%Gütefaktor [\%]  & 70 & 80 &  90 & 100 & 110 & 120 & 130 & 140 & 150\\ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Korrekturfaktor  & 1,29 & 1,16 & 1,07 & 1,00 & 0,94 & 0,89 & 0,85 & 0,81 & 0,79\\ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\bottomrule
+%\end{tabularx}
+%\end{table}
+%
+%Der Höchstwert für einen 100\,Prozent-Referenzstandort über 20 Jahre liegt bei \SI{7}{\ct} pro kWh. Es erfolgt eine jährliche, automatische 1\,Prozent-Absenkung. Dennoch kann die \acs{BNetzA}, abhängig von der Kostensituation und den Wettbewerbsbedingungen, den Höchstwert um +/- 10\,Prozent variieren.
+%
+%Die Ausschreibungsmenge, liegt in den Jahren 2017, 2018 und 2019 bei jeweils 2,8\,GW und ab 2020 bei 2,9\,GW pro Jahr (vgl.\,\autocite{BundesgesetzblattTeilINr.2016},\,\autocite{JustizundfuerVerbraucherschutz2014},\,\autocite{WirtschaftundEnergieBMWi2016b}).
+%
+%%-------------------------------------------
+%%--  Subsection							 --
+%%-------------------------------------------
+%\subsection{Wind offshore}
+%\label{cha:windoffshore}
+%Das Ausbauziel für \acp{WKA} auf See bis zum Jahr 2030 ist mit 15\,GW installierte Leistung festgelegt. Die ersten Anlagen im Ausschreibungssystem sollen ab 2021 in Betrieb gehen. 
+%Im Vergleich zu \acp{WKA} an Land treten hier hohe Investitionssummen und sehr lange Planungs- und Realisierungszeiträume von bis zu zehn Jahren auf. Die Netzanschlusskosten werden bundesweit über die Netzentgelte und somit auf die Stromverbraucher gewälzt. Aus diesem Grund muss das Ausschreibungsdesign stets auf einer effizienten und bedarfsgerechten Netzplanung aufsetzen. Eine noch bessere Verzahnung der Flächenplanung und Raumordnung, Anlagengenehmigung, \acs{EEG}-Förderung und Netzanbindung miteinander ist somit unabdingbar und soll durch das von der Bundesregierung angedachte \enquote{zentrale Modell} abgebildet werden. Es gilt für Inbetriebnahmen von Windparks auf See ab dem Jahr 2026 (vgl.\,\autocite{WirtschaftundEnergieBMWi2015},\,\autocite{WirtschaftundEnergieBMWi2016b}).
+%
+%Vorab erfolgen Ausschreibungen in der Übergangsphase für die Jahre 2021 bis 2025. Die erste Ausschreibung erfolgt im Jahr 2020. Die nachfolgende Auflistung stellt die Ausschreibungsvolumina für die jeweiligen Jahre, aufgeteilt in Übergangsphase und zentrales Modell, dar (vgl.\,\autocite{WirtschaftundEnergieBMWi2016b}).
+%
+%Der Bonus für die Wassertiefe knüpft an die bisherige Regelung im \acs{EEG} 2014 an. Im zentralen Modell, gültig ab 2025, soll vorab ein Flächenentwicklungsplan vom \ac{BSH} Flächen festgelegt werden, auf denen Windparks mit Rücksicht auf Windverhältnisse und Meeresumwelt errichtet werden können. Somit sollen die Kosten der Projektentwicklung reduziert und Genehmigungsverfahren im Anschluss beschleunigt werden. Jährlich werden in einem Gebotstermin 840\,MW ausgeschrieben (vgl.\,\autocite{BundesgesetzblattTeilINr.2016},\,\autocite{WirtschaftundEnergieBMWi2016c}).
+%
+%\begin{itemize}
+%	\item 2021 -- 2025
+%		\begin{itemize}
+%			\item 2021 -- 500\,MW jährlicher Zubau in der Ostsee 
+%			\item 2022 -- 500\,MW jährlicher Zubau in der Nord- und Ostsee
+%			\item 2023 bis 2025 -- 700\,MW jährlicher Zubau
+%			\item Bonus kann in Abhängigkeit von der Seetiefe erfolgen
+%		\end{itemize}
+%	\item Ab 2026
+%		\begin{itemize}
+%			\item 840\,MW pro Jahr Ausschreibungsvolumen
+%			\item Bieter konkurrieren um die Errichtung eines Windparks auf der voruntersuchten Fläche
+%			\item Bei Zuschlagserhalt Anspruch auf Marktprämie
+%		\end{itemize}
+%\end{itemize}
+%
+%Laut dem \acs{EEG} 2016 können \acp{WKA} auf See, die als Prototypen gelten oder andernfalls bis Ende 2016 eine unbedingte Netzanbindungszusage oder eine Anschlusskapazität erhalten haben und bis Ende 2020 in Betrieb genommen werden, nicht an der Ausschreibung teilnehmen (vgl.\,\autocite{BundesgesetzblattTeilINr.2016}).
+%
+%%-------------------------------------------
+%%--  Subsection							 --
+%%-------------------------------------------
+%\subsection{Biomasse}
+%\label{cha:biomasse}
+%\acp{BMA} ab einer installierten Leistung von 150\,kW können sich an einem Ausschreibungsverfahren beteiligen. Das Ausschreibungsvolumen für \acp{BMA} in den Jahren 2017, 2018 und 2019 liegt jeweils bei 150\,MW und in den Jahren 2020, 2021 und 2022 jeweils bei 200 MW\,pro Jahr. Für Bestandsanlagen unabhängig von der installierten Leistung gibt es die Möglichkeit, sich an einer Ausschreibung zu beteiligen, um eine 10-jährige Anschlussförderung zu erhalten, sofern der Strom bedarfsgerecht und flexibel erzeugt wird. 
+%Außerdem erhalten Biogasanlagen eine Förderung nur für die Hälfte der Stunden eines Jahres. Hintergrund ist die Lenkung der Stromproduktion auf Zeiten, in denen der Großhandelspreis hoch ist, ebenso die Nachfrage groß ist und wenig Wind und Sonne zur Verfügung steht (vgl.\,\autocite{WirtschaftundEnergieBMWi2016b}).

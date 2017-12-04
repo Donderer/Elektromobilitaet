@@ -1,0 +1,16 @@
+%-------------------------------------------
+%--   Acronym							 --
+%-------------------------------------------
+\chapter*{Abkürzungsverzeichnis}
+%\markboth{Abkürzungsverzeichnis}{Abkürzungsverzeichnis}
+%\addcontentsline{toc}{chapter}{Abkürzungsverzeichnis}
+
+\begin{acronym}[MMMMMMMMM]
+	\setlength{\itemsep}{-\parsep}%Kompaktansicht, Zeilenabstand verringern
+	\renewcommand*{\acsfont}[1]{{\textbf{#1}}}%Abkürzung fett
+	\renewcommand{\aclabelfont}[1]{\normalfont{\normalsize{#1}}\hfill}%auch für Abkürzungen Serifenschrift verwenden
+	
+	\acro{EPS}{Electric Power Steering}
+	
+		
+\end{acronym}
